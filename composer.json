@@ -1,0 +1,12 @@
+{
+  "require": {
+    "twig/twig": "~1.0",
+    "silex/silex": "~1.0",
+    "mattsmithdev/pdo-crud-for-free": "dev-master"
+  },
+  "autoload": {
+    "psr-4":{
+      "Itb\\":"src"
+    }
+  }
+}

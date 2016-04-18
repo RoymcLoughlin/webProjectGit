@@ -1,0 +1,39 @@
+{% extends '_base.html.twig' %}
+
+{# ------------------------------------------------- #}
+{% block pageTitle %}Home page{% endblock %}
+
+{# ------------------------------------------------- #}
+{% block indexLinkStyle %}current_page{% endblock %}
+
+{# ------------------------------------------------- #}
+{% block main %}
+
+    <h1>
+        Welcome to Martial Arts Home Page
+    </h1>
+
+    <p>
+        Maartial Arts.
+    </p>
+
+    <form
+            method = "post"
+            action = "/processIndexMessageForm"
+            >
+
+        <p>
+            Enquire about joining? Why not send us a message?
+        </p>
+
+        <p>
+            <input type = "text" name = "message">
+        </p>
+
+        <p>
+            <input type = "submit" value = "send message">
+        </p>
+
+    </form>
+
+{% endblock %}
