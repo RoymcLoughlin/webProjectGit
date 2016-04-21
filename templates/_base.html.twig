@@ -11,7 +11,15 @@
     </head>
     <body>
     <nav>
-        <ul>
+    <div class="menu">
+        <div class="container">
+            <div class="logo">
+                <a href="/"><img src="images/logo.png" alt=""/></a>
+            </div>
+            <div class="h_menu4"><!-- start h_menu4 -->
+                <a class="toggleMenu" href="#">Menu</a>
+
+                <ul class="nav">
             <li>
                 <a href="/" class="{% block indexLinkStyle %}{% endblock %}">Home</a>
             </li>
@@ -21,7 +29,29 @@
             <li>
                 <a href="/contact" class="{% block contactLinkStyle %}{% endblock %}">Contact Us</a>
             </li>
+            <li>
+                <a href="/classes" class="{% block classesLinkStyle %}{% endblock %}">Classes</a>
+            </li>
+            <li>
+                <a href="/trainers" class="{% block trainersLinkStyle %}{% endblock %}">Trainers</a>
+            </li>
+            <li>
+                <a href="/login" class="{% block loginLinkStyle %}{% endblock %}">Login</a>
+            </li>
+            {#<li class="active"><a href="index.html">Home</a></li>#}
+            {#<li><a href="about.html">About</a></li>#}
+            {#<li><a href="trainers.html">Trainers</a></li>#}
+            {#<li><a href="classes.html">Classes</a>#}
+{##}
+            {#</li>#}
+            {#<li><a href="blog.html">Blog</a></li>#}
+            {#<li><a href="pricing.html">Pricing</a></li>#}
+            {#<li><a href="contact.html">Contact</a></li>#}
         </ul>
+                </div>
+            </div>
+        </div>
+
     </nav>
 
     {% block main %}

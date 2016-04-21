@@ -38,10 +38,11 @@ $app->register(new Provider\ServiceControllerServiceProvider());
 
 // --- do this LAST - after other Silex service providers ----
 
-$app->register(new Provider\WebProfilerServiceProvider(), array(
+//$app->register(new Provider\WebProfilerServiceProvider(), array(
 
-    'profiler.cache_dir' => __DIR__.'/../cache/profiler',
-    'profiler.mount_prefix' => '/_profiler', // this is the default
-
-));
+  //  'profiler.cache_dir' => __DIR__.'/../cache/profiler',
+    //'profiler.mount_prefix' => '/_profiler', // this is the default
+    //'profiler.mount_prefix' => '/_profiler', // this is the default
+//
+//));
 

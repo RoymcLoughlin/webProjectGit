@@ -14,9 +14,12 @@ $id = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_NUMBER_INT);
 // use our static controller() method...
 $app->get('/',      \Itb\Utility::controller('Itb', 'main/index'));
 $app->get('/about', \Itb\Utility::controller('Itb', 'main/about'));
-$app->get('/contact', \Itb\Utility::controller('Itb', 'main/contact'));
-$app->get('/list', \Itb\Utility::controller('Itb', 'main/list'));
-$app->get('/sitemap', \Itb\Utility::controller('Itb', 'main/sitemap'));
+$app->get('/classes', \Itb\Utility::controller('Itb', 'main/classes'));
+$app->get('/trainers', \Itb\Utility::controller('Itb', 'main/trainers'));
+$app->get('/login', \Itb\Utility::controller('Itb', 'main/login'));
+//$app->get('/login', \Itb\Utility::controller('Itb', 'main/login'));
+//$app->get('/login', \Itb\Utility::controller('Itb', 'main/login'));
+//$app->get('/login', \Itb\Utility::controller('Itb', 'main/login'));
 $app->get('/detail/{id}', \Itb\Utility::controller('Itb', 'main/detail'));
 
 $app->post('/processIndexMessageForm', \Itb\Utility::controller('Itb', 'message/submit'));
@@ -41,6 +44,7 @@ $app->error(function (\Exception $e, $code) use ($app) {
 // --------- DEV ZONE ----------
 // ------ list all routes ----------
 $app->get('/listRoutes', function() use ($app) {
+
     print '<h1>List all routes</h1>';
     print '<pre>';
     foreach ($app['routes'] as $pattern) {

@@ -46,8 +46,8 @@ class DatabaseManager
 
     private $error;
 
-    public function __construct()
-    {
+    public function __construct(){
+
         // DSN - the Data Source Name - required by the PDO to connect // Matts comment.
 
         $dsn = 'mysql:host=' . $this->host . ';dbname=' . $this->dbname;
@@ -63,17 +63,18 @@ class DatabaseManager
             );
 
             $this->dbh = new \PDO($dsn, $this->user, $this->pass, $options);
+
         }catch (\PDOException $e) {
 
             $this->error = $e->getMessage();
-            print 'Sorry - an error occurred in the database  - please contact the site administrator ...';
+            print 'Sorry - an error occurred in the database - Please contact the site administrator, sorry for the inconvenience';
             print '<br>';
             print  $e->getMessage();
         }
     }
 
-    public function getDbh()
-    {
+    public function getDbh(){
+
         return $this->dbh;
     }
 
