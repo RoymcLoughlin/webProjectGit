@@ -1,13 +1,22 @@
 <?php
 namespace Itb;
 
+use Itb\Martial;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
 class MainController
 {
+
     public function indexAction(Request $request, Application $app){
 
+        $martialRepository = new Martial();
+        $martial = martial::getAll();
+
+        $argsArray = [
+
+            'id' => $martial
+        ];
         $templateName = 'index';
         return $app['twig']->render($templateName . '.html.twig', []);
     }
@@ -42,6 +51,12 @@ class MainController
         return $app['twig']->render($templateName . '.html.twig', []);
     }
 
+    public function contactThisAction(Request $request, Application $app){
+
+        $templateName = 'login';
+        return $app['twig']->render($templateName . '.html.twig', []);
+    }
+
    /* public function sitemapAction(Request $request, Application $app){
 
         $templateName = 'sitemap';
@@ -66,12 +81,12 @@ class MainController
 
     public function detailAction(Request $request, Application $app, $id){
 
-        $dvdRepository = new DvdRepository();
-        $dvd = $dvdRepository->getOneById($id);
+        $martialRepository = new martial();
+        $martial = $martialRepository->getOneById($id);
 
         $argsArray = [
 
-            'dvd' => $dvd,
+            '' => $martial,
 
         ];
 
