@@ -8,10 +8,7 @@
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/jquery.contentcarousel.js"></script>
 <link rel="stylesheet" href="css/jquery-ui.css" />
-<!---//calender-style---->
-
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!--<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />-->
 <script src="js/jquery.min.js"></script>
 <script type="text/javascript">
     jQuery(document).ready(function($) {
@@ -21,10 +18,11 @@
         });
     });
 </script>
-<!-- grid-slider -->
 <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
 <script type="text/javascript" src="js/jquery.contentcarousel.js"></script>
 <script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js"></script>
+<script src="js/googleMaps.js"></script>
 
 <?php
 require_once __DIR__ . '/../app/setup.php';
@@ -38,14 +36,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), [
     ]
 );
 
-//require_once __DIR__ . '/../app/config_db.php';
-
 use Itb\MainController;
-
-//define('DB_HOST', 'localhost');
-//define('DB_USER', 'root');
-//define('DB_PASS', '');
-//define('DB_NAME', 'itb');
 
 $mainController = new MainController();
 
@@ -62,10 +53,6 @@ $app->get('/classes', \Itb\Utility::controller('Itb', 'main/classes'));
 $app->get('/trainers', \Itb\Utility::controller('Itb', 'main/trainers'));
 $app->get('/login', \Itb\Utility::controller('Itb', 'main/login'));
 $app->get('/contact', \Itb\Utility::controller('Itb', 'main/contact'));
-
-
-//$app->get('/login', \Itb\Utility::controller('Itb', 'main/login'));
-//$app->get('/login', \Itb\Utility::controller('Itb', 'main/login'));
 $app->get('/detail/{id}', \Itb\Utility::controller('Itb', 'main/detail'));
 
 $app->post('/processIndexMessageForm', \Itb\Utility::controller('Itb', 'message/submit'));
@@ -73,19 +60,8 @@ $app->post('/processIndexMessageForm', \Itb\Utility::controller('Itb', 'message/
 // 404 - Page not found
 $app->error(function (\Exception $e, $message) use ($app) {
 
-//    dump($code);
-//    switch ($code) {
-
-//        case 404:
-//            $message = 'The requested page could not be found.';
-         $mainController = new Itb\MainController();
-            return $mainController->error404($app, $message);
-
-//        default:
-//            $message = 'We are sorry, but something went terribly wrong.'
-//                . '<p>' . $e->getMessage();
-//            return \Itb\MainController::error404($app, $message);
-//    }
+    $mainController = new Itb\MainController();
+    return $mainController->error404($app, $message);
 });
 
 

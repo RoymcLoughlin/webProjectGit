@@ -10,13 +10,13 @@ class MainController
 
     public function indexAction(Request $request, Application $app){
 
-        $martialRepository = new Martial();
-        $martial = martial::getAll();
-
-        $argsArray = [
-
-            'id' => $martial
-        ];
+//        $martialRepository = new Martial();
+//        $martial = martial::getAll();
+//
+//        $argsArray = [
+//
+//            'id' => $martial
+//        ];
         $templateName = 'index';
         return $app['twig']->render($templateName . '.html.twig', []);
     }

@@ -9,6 +9,7 @@
 {# ------------------------------------------------- #}
 {% block main %}
 <body>
+<div id="map"></div>
 	<div class="header">
 	   <div class="container">
 		  <div class="header-text">
@@ -18,12 +19,10 @@
 		  </div>
 	    </div>
 	  </div>
-	<!-- end header_top -->
-	<!-- start header_bottom -->
 	  <div class="header-bottom">
 		 <div class="container">
 			<div class="header-bottom_left">
-				<i class="phone"> </i><span>1-200-346-2986</span>
+				<i class="phone"> </i><span>+353-83-2425764</span>
 			</div>
 			<div class="social">
 			   <ul>
@@ -39,10 +38,8 @@
 		   <div class="clear"></div>
 		</div>
 	  </div>
-	<!-- end header_bottom -->
 	 <div class="main">
 	 	 <div class="container">
-			<!-- start content-top -->
 			<div class="row content-top">
 				 <div class="col-md-5">
 				  <img src="images/flying.jpg" class="img-responsive" alt=""/>
@@ -53,8 +50,6 @@
 				 </div>
             </div>
 		 </div>
-		<!-- end content-top -->
-		  <!-- end content-middle -->
 		   <div class="row about">
 		      <div class="col-md-8">
 		     	 <h3 class="m_2">All Classes</h3>
@@ -62,116 +57,35 @@
 		     	 	<div class="cardio_list">
 		     	 	  <div class="cardio_sublist">
 			     	 	<ul class="cardio">
-			     	 		<li><i class="clock"> </i><span>Cardio Fitness</span></li>
+			     	 		<li><i class="clock"> </i><span>Taekwondo</span></li>
 			     	 	</ul>
 			     	 	<div class="social-media">
 						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="share"><a href="#" target="_blank"> </a></span></li>
+						        {#<li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="/trainers" class="{% block trainersLinkStyle %}{% endblock %}"></a></span></li>#}
 						    </ul>
 					   </div>
 			     	 	<div class="clear"></div>
 		     	 	  </div>
 		     	 	  <div class="cardio_sublist">
 			     	 	<ul class="cardio">
-			     	 		<li><i class="clock"> </i><span>Spinning</span></li>
+			     	 		<li><i class="clock"> </i><span>Kung Fu</span></li>
 			     	 	</ul>
 			     	 	<div class="social-media">
-						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="share"><a href="#" target="_blank"> </a></span></li>
-						    </ul>
-					   </div>
+                            <ul>
+                                {#<li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="/trainers" class="{% block trainersLinkStyle %}{% endblock %}"></a></span></li>#}
+                            </ul>
+                        </div>
 			     	 	<div class="clear"></div>
 		     	 	  </div>
 		     	 	  <div class="cardio_sublist">
 			     	 	<ul class="cardio">
-			     	 		<li><i class="clock"> </i><span>Pilates</span></li>
+			     	 		<li><i class="clock"> </i><span>Karate</span></li>
 			     	 	</ul>
 			     	 	<div class="social-media">
-						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="share"><a href="#" target="_blank"> </a></span></li>
-						    </ul>
-					   </div>
-			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	   <div class="cardio_sublist">
-			     	 	<ul class="cardio">
-			     	 		<li><i class="clock"> </i><span>Boxing</span></li>
-			     	 	</ul>
-			     	 	<div class="social-media">
-						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="share"><a href="#" target="_blank"> </a></span></li>
-						    </ul>
-					   </div>
-			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	</div>
-		     	 	<div class="cardio_list1">
-		     	 	  <div class="cardio_sublist">
-			     	 	<ul class="cardio">
-			     	 		<li><i class="clock"> </i><span>Aerobics</span></li>
-			     	 	</ul>
-			     	 	<div class="social-media">
-						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="share"><a href="#" target="_blank"> </a></span></li>
-						    </ul>
-					   </div>
-			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	  <div class="cardio_sublist">
-			     	 	<ul class="cardio">
-			     	 		<li><i class="clock"> </i><span>Kik Boxing</span></li>
-			     	 	</ul>
-			     	 	<div class="social-media">
-						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="share"><a href="#" target="_blank"> </a></span></li>
-						    </ul>
-					   </div>
-			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	  <div class="cardio_sublist">
-			     	 	<ul class="cardio">
-			     	 		<li><i class="clock"> </i><span>CrossFit</span></li>
-			     	 	</ul>
-			     	 	<div class="social-media">
-						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="share"><a href="#" target="_blank"> </a></span></li>
-						    </ul>
-					   </div>
-			     	 	<div class="clear"></div>
-		     	 	  </div>
-		     	 	   <div class="cardio_sublist">
-			     	 	<ul class="cardio">
-			     	 		<li><i class="clock"> </i><span>Yoga</span></li>
-			     	 	</ul>
-			     	 	<div class="social-media">
-						     <ul>
-						        <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="Send to"><a href="#" target="_blank"> </a> </span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="like it"><a href="#" target="_blank"> </a></span></li>
-						        <li><span class="simptip-position-bottom simptip-movable" data-tooltip="share"><a href="#" target="_blank"> </a></span></li>
-						    </ul>
-					   </div>
+                            <ul>
+                                <li> <span class="simptip-position-bottom simptip-movable" data-tooltip="timetable"><a href="/trainers" class="{% block trainersLinkStyle %}{% endblock %}"></a></span></li>
+                            </ul>
+                        </div>
 			     	 	<div class="clear"></div>
 		     	 	  </div>
 		     	 	</div>
@@ -181,11 +95,8 @@
 				<div class="col-md-4">
 				  <h3 class="m_4">Membership Prices</h3>
 				  <div class="members">
-				   <h4 class="m_3">25% Discount of for all members</h4>
-				   <p>Discount on services and <br>treatments at the GymBase for<br> all membership cards holders.</p>
-				   <div class="btn1">
-				    <a href="#">More</a>
-			       </div>
+				   <h4 class="m_3">25% Discount of for all Students</h4>
+				   <p>Everyone else is <br>the full price, prices depend on class.</p>
 				  </div>
 			    </div>
 			    <div class="clear"></div>
@@ -202,57 +113,56 @@
 		   <div class="clear"></div>
 
  	    <div class="map">
-			<iframe width="100%" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=United+Kingdom&amp;aq=0&amp;oq=un&amp;sll=37.0625,-95.677068&amp;sspn=48.956293,107.138672&amp;ie=UTF8&amp;hq=&amp;hnear=United+Kingdom&amp;ll=55.378051,-3.435973&amp;spn=135.795411,68.554687&amp;t=m&amp;z=2&amp;output=embed"> </iframe><br /><small><a href="http://maps.google.com/maps?f=q&amp;source=embed&amp;hl=en&amp;geocode=&amp;q=United+Kingdom&amp;aq=0&amp;oq=un&amp;sll=37.0625,-95.677068&amp;sspn=48.956293,107.138672&amp;ie=UTF8&amp;hq=&amp;hnear=United+Kingdom&amp;ll=55.378051,-3.435973&amp;spn=135.795411,68.554687&amp;t=m&amp;z=2" style="color:#666;font-size:12px;text-align:left"> </a></small>
+            <iframe src="http://maps.google.com/maps/ms?ie=UTF8&amp;hl=en&amp;msa=0&amp;msid=106155920895502303177.00047f06172cf6493016d&amp;ll=53.504997,-6.380653&amp;spn=0.051048,0.139046&amp;z=12&amp;output=embed" width="100%" height="400" frameborder="0" marginwidth="0" marginheight="0" scrolling="no"></iframe>
 			<div class="opening_hours">
 			 <ul class="times">
 			 	<li>Opening <span class="opening">Hours</span></li>
-			 	<li><i class="calender"> </i><span class="week">Monday</span><div class="hours">h.6:00-h.24:00</div>  <div class="clear"></div></li>
-			 	<li><i class="calender"> </i><span class="week">Tuesday</span><div class="hours">h.6:00-h.24:00</div>  <div class="clear"></div></li>
-			 	<li><i class="calender"> </i><span class="week">Wednesday</span><div class="hours">h.6:00-h.24:00</div>  <div class="clear"></div></li>
-			 	<li><i class="calender"> </i><span class="week">Thursday</span><div class="hours">h.6:00-h.24:00</div>  <div class="clear"></div></li>
-			 	<li><i class="calender"> </i><span class="week">Friday</span><div class="hours">h.6:00-h.24:00</div>  <div class="clear"></div></li>
-			 	<li><i class="calender"> </i><span class="week">Saturday</span><div class="hours">h.6:00-h.24:00</div>  <div class="clear"></div></li>
-			 	<li><i class="calender"> </i><span class="week">Sunday</span><div class="hours">h.6:00-h.24:00</div>  <div class="clear"></div></li>
-			    <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet</li>
-			 	<li>Enjoy it!</li>
+			 	<li><i class="calender"> </i><span class="week">Monday</span><div class="hours">h.6:00-h.20:00</div>  <div class="clear"></div></li>
+			 	<li><i class="calender"> </i><span class="week">Tuesday</span><div class="hours">h.6:00-h.20:00</div>  <div class="clear"></div></li>
+			 	<li><i class="calender"> </i><span class="week">Wednesday</span><div class="hours">h.6:00-h.20:00</div>  <div class="clear"></div></li>
+			 	<li><i class="calender"> </i><span class="week">Thursday</span><div class="hours">h.6:00-h.20:00</div>  <div class="clear"></div></li>
+			 	<li><i class="calender"> </i><span class="week">Friday</span><div class="hours">h.6:00-h.20:00</div>  <div class="clear"></div></li>
+			 	<li><i class="calender"> </i><span class="week">Saturday</span><div class="hours">h.6:00-h.20:00</div>  <div class="clear"></div></li>
+			 	<li><i class="calender"> </i><span class="week">Sunday</span><div class="hours">h.6:00-h.20:00</div>  <div class="clear"></div></li>
+			    <li>Thinking of joining? Come try a class today</li>
+			 	<li>You might enjoy it!</li>
 			 </ul>
 		    </div>
 		 </div>
 		 <div class="footer-top">
-		 	<ul class="twitter_footer">
-		 	 <li>
-		 	   <i class="twt_icon"> </i><p>aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel  <span class="m_6">2 days ago</span></p>
-		 	   <div class="clear"></div>
-		 	 </li>
-		 	</ul>
 		 </div>
 		 <div class="footer-bottom">
 		   <div class="container">
 		 	 <div class="row section group">
 				<div class="col-md-4">
 					<div class="f-logo">
-						<img src="images/logo.jpg" alt=""/>
 					</div>
-					<p class="m_9">Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis</p>
-					<p class="address">Phone : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="m_10">(00) 222 666 444</span></p>
-					<p class="address">Email : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="m_10">info[at]mycompany.com</span></p>
+					<p class="m_9">This is Ashbournes best place to train! Come join us today!</p>
+					<p class="address">Phone : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="m_10">(353) 83 426 5764</span></p>
+					<p class="address">Email : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="m_10">martial@ashbourne.com</span></p>
 				</div>
 				<div class="col-md-4">
 					<ul class="list">
 						<li class="m_7">Menu</li>
-						<li><a href="#">About</a></li>
-						<li><a href="#">Trainers</a></li>
-						<li><a href="#">Classes</a></li>
-						<li><a href="#">Pricing</a></li>
-						<li><a href="#">Privacy</a></li>
-						<li><a href="#">Contact</a></li>
-					</ul>
-					<ul class="list1">
-						<li class="m_7">Community</li>
-						<li><a href="#">Blog</a></li>
-						<li><a href="#">Forum</a></li>
-						<li><a href="#">Support</a></li>
-						<li><a href="#">Newsletter</a></li>
+
+                        <li>
+                            <a href="#">Home</a>
+                        </li>
+                        <li>
+                            <a href="#">About Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Classes</a>
+                        </li>
+                        <li>
+                            <a href="#">Trainers</a>
+                        </li>
+                        <li>
+                            <a href="#">Login</a>
+                        </li>
 					</ul>
 				</div>
 				<div class="clear"></div>
@@ -262,7 +172,7 @@
 		 <div class="copyright">
 		  <div class="container">
 		    <div class="copy">
-		        <p>© 2014 Template by <a href="http://w3layouts.com" target="_blank"> w3layouts</a></p>
+		        <p>© 2016 Framework Project</p>
 		    </div>
 		    <div class="social">
 			   <ul>
