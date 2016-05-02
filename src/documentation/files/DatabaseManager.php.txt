@@ -56,7 +56,8 @@ class DatabaseManager
      * function construct
      */
 
-    public function __construct(){
+    public function __construct()
+    {
 
         // DSN - the Data Source Name - required by the PDO to connect // Matts comment.
 
@@ -73,9 +74,7 @@ class DatabaseManager
             );
 
             $this->dbh = new \PDO($dsn, $this->user, $this->pass, $options);
-
-        }catch (\PDOException $e) {
-
+        } catch (\PDOException $e) {
             $this->error = $e->getMessage();
             print 'Sorry - an error occurred in the database - Please contact the site administrator, sorry for the inconvenience';
             print '<br>';
@@ -87,9 +86,10 @@ class DatabaseManager
      * gets the database
      * @return database|\PDO
      */
-    public function getDbh(){
 
+    public function getDbh()
+    {
         return $this->dbh;
     }
-
 }
+

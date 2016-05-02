@@ -22,7 +22,8 @@ class MessageController
      */
 
 
-    public function submitAction(Request $request, Application $app){
+    public function submitAction(Request $request, Application $app)
+    {
 
         // if we need 'get' parameters, get them from '$request->query'
         // $paramsGet = $request->query->all();
@@ -46,5 +47,4 @@ class MessageController
 
         return $app['twig']->render($templateName . '.html.twig', $argsArray);
     }
-
 }

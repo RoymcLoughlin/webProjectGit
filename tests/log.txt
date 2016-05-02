@@ -1,0 +1,11 @@
+TAP version 13
+ok 1 - ItbTest\ZMetaTest::testIfWorking
+ok 2 - ItbTest\ZMetaTest::testAverageAttendance
+ok 3 - ItbTest\ZMetaTest::testId
+ok 4 - ItbTest\ZMetaTest::testClassName
+ok 5 - ItbTest\ZMetaTest::testCategory
+ok 6 - ItbTest\ZMetaTest::testAttendance
+ok 7 - ItbTest\ZMetaTest::testTotalClasses
+ok 8 - ItbTest\ZMetaTest::testTimeOfEntry
+ok 9 - ItbTest\ZMetaTest::testCurrentClassProgress
+1..9

@@ -3,6 +3,7 @@
  * namespace Itb
  */
 namespace Itb;
+
 /**
  * Class Utility
  * @package Itb
@@ -23,8 +24,8 @@ class Utility
      * @param string $shortName controller and action name sepaerate by "/"
      * @return string namespace, controller class name plus :: plus action name
      */
-    public static function controller($namespace, $shortName){
-
+    public static function controller($namespace, $shortName)
+    {
         list($shortClass, $shortMethod) = explode('/', $shortName, 2);
 
         $shortClassCapitalise = ucfirst($shortClass);
@@ -34,5 +35,3 @@ class Utility
         return $namespaceClassAction;
     }
 }
-
-

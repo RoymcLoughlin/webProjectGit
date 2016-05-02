@@ -27,8 +27,9 @@ class MainController
      * @param Application $app
      * @return mixed
      */
-   public function indexAction(Request $request, Application $app){
-//    public function indexAction(\Twig_Environment $twig){
+   public function indexAction(Request $request, Application $app)
+   {
+       //    public function indexAction(\Twig_Environment $twig){
 
 //        $martialRepository = new Martial();
         $martialRepository = new MartialRepository();
@@ -46,7 +47,7 @@ class MainController
 //        $htmlOutput = $twig->render($templateName . '.html.twig', $argsArray);
 //        print $htmlOutput;
         return $app['twig']->render($templateName . '.html.twig', $argsArray);
-    }
+   }
 
     /**
      * admin Action
@@ -55,20 +56,20 @@ class MainController
      * @return mixed
      */
 
-   public function adminAction(Request $request, Application $app){
-
-      $martialRepository = new MartialRepository();
+   public function adminAction(Request $request, Application $app)
+   {
+       $martialRepository = new MartialRepository();
        $martial = $martialRepository->getAll();
 
-        $argsArray = [
+       $argsArray = [
 
             'martial' => $martial,
         ];
 
-        $templateName = 'admin';
+       $templateName = 'admin';
 
-        return $app['twig']->render($templateName . '.html.twig', $argsArray);
-    }
+       return $app['twig']->render($templateName . '.html.twig', $argsArray);
+   }
 
     /**
      * contract Action
@@ -76,8 +77,8 @@ class MainController
      * @param Application $app
      * @return mixed
      */
-    public function contactAction(Request $request, Application $app){
-
+    public function contactAction(Request $request, Application $app)
+    {
         $templateName = 'contact';
         return $app['twig']->render($templateName . '.html.twig', []);
     }
@@ -88,8 +89,8 @@ class MainController
      * @param Application $app
      * @return mixed
      */
-    public function aboutAction(Request $request, Application $app){
-
+    public function aboutAction(Request $request, Application $app)
+    {
         $templateName = 'about';
         return $app['twig']->render($templateName . '.html.twig', []);
     }
@@ -101,8 +102,8 @@ class MainController
      * @return mixed
      */
 
-    public function classesAction(Request $request, Application $app){
-
+    public function classesAction(Request $request, Application $app)
+    {
         $templateName = 'classes';
         return $app['twig']->render($templateName . '.html.twig', []);
     }
@@ -114,8 +115,8 @@ class MainController
      * @return mixed
      */
 
-    public function trainersAction(Request $request, Application $app){
-
+    public function trainersAction(Request $request, Application $app)
+    {
         $templateName = 'trainers';
         return $app['twig']->render($templateName . '.html.twig', []);
     }
@@ -127,8 +128,8 @@ class MainController
      * @return mixed
      */
 
-    public function loginAction(Request $request, Application $app){
-
+    public function loginAction(Request $request, Application $app)
+    {
         $martialRepository = new MartialRepository();
         $martial = $martialRepository->getAll();
 
@@ -138,7 +139,6 @@ class MainController
 
         $templateName = 'login';
         return $app['twig']->render($templateName . '.html.twig', $argsArray);
-
     }
 
     /**
@@ -185,8 +185,8 @@ class MainController
      * @return mixed
      */
 
-    public function contactThisAction(Request $request, Application $app){
-
+    public function contactThisAction(Request $request, Application $app)
+    {
         $templateName = 'login';
         return $app['twig']->render($templateName . '.html.twig', []);
     }
@@ -203,8 +203,8 @@ class MainController
      * @param Application $app
      * @return mixed
      */
-    public function listAction(Request $request, Application $app){
-
+    public function listAction(Request $request, Application $app)
+    {
         $martialRepository = new MartialRepository();
      //   $martial = $MartialRepository->getAll();//not sure if needed, implement for the moment
 
@@ -226,8 +226,8 @@ class MainController
      * @param $id
      * @return mixed
      */
-    public function detailAction(Request $request, Application $app, $id){
-
+    public function detailAction(Request $request, Application $app, $id)
+    {
         $martialRepository = new martial();
         $martial = $martialRepository->getOneById($id);
 
@@ -249,8 +249,8 @@ class MainController
      * @param $message
      * @return mixed
      */
-    public static function error404(Application $app, $message){
-
+    public static function error404(Application $app, $message)
+    {
         $argsArray = [
 
             'name' => 'Fabien',

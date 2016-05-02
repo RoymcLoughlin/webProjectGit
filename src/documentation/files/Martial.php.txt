@@ -185,5 +185,5 @@ class Martial extends DatabaseTable
 //        return  '<img src="images/starsHalf.png" alt="half star">';
 
 //    }
-
 }
+

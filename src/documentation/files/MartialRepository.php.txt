@@ -104,6 +104,5 @@ class MartialRepository
             return null;
         }
     }
-
-
 }
+
