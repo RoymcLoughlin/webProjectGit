@@ -1,7 +1,13 @@
 <?php
-
+/**
+ * namespace Itb
+ */
 namespace Itb;
 
+/**
+ * Class DatabaseManager
+ * @package Itb
+ */
 class DatabaseManager
 {
     /**
@@ -46,6 +52,10 @@ class DatabaseManager
 
     private $error;
 
+    /**
+     * function construct
+     */
+
     public function __construct(){
 
         // DSN - the Data Source Name - required by the PDO to connect // Matts comment.
@@ -73,6 +83,10 @@ class DatabaseManager
         }
     }
 
+    /**
+     * gets the database
+     * @return database|\PDO
+     */
     public function getDbh(){
 
         return $this->dbh;

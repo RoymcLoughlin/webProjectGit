@@ -1,11 +1,27 @@
 <?php
+/**
+ * namespace Itb
+ */
 namespace Itb;
 
 //use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
+/**
+ * Class MessageController
+ * @package Itb
+ */
+
 class MessageController
 {
+    /**
+     * function submit action
+     * @param Request $request
+     * @param Application $app
+     * @return mixed
+     */
+
+
     public function submitAction(Request $request, Application $app){
 
         // if we need 'get' parameters, get them from '$request->query'

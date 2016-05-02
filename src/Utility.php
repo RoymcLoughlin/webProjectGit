@@ -1,6 +1,12 @@
 <?php
+/**
+ * namespace Itb
+ */
 namespace Itb;
-
+/**
+ * Class Utility
+ * @package Itb
+ */
 class Utility
 {
     /**
