@@ -1,24 +1,32 @@
 <?php
 namespace Itb;
 
-use Itb\Martial;
+use Itb\MartialRepository;
 use Silex\Application;
 use Symfony\Component\HttpFoundation\Request;
 
 class MainController
 {
 
-    public function indexAction(Request $request, Application $app){
+   public function indexAction(Request $request, Application $app){
+//    public function indexAction(\Twig_Environment $twig){
 
 //        $martialRepository = new Martial();
+        $martialRepository = new MartialRepository();
 //        $martial = martial::getAll();
+       $martial = $martialRepository->getAll();
 //
 //        $argsArray = [
+        $argsArray = [
+            'martial' => $martial,
+        ];
 //
-//            'id' => $martial
+//            'martialartsclass' => $martial
 //        ];
         $templateName = 'index';
-        return $app['twig']->render($templateName . '.html.twig', []);
+//        $htmlOutput = $twig->render($templateName . '.html.twig', $argsArray);
+//        print $htmlOutput;
+        return $app['twig']->render($templateName . '.html.twig', $argsArray);
     }
 
     public function contactAction(Request $request, Application $app){

@@ -8,12 +8,15 @@
 
 {# ------------------------------------------------- #}
 {% block main %}
+    {% for martial in martial %}
+        <li>{{ martial.id }}</li>
+    {% endfor %}
 <body>
 <div id="map"></div>
 	<div class="header">
 	   <div class="container">
 		  <div class="header-text">
-			<h1>Mixed Martial Arts Ashbourne</h1>
+			<h1>Mixed Martial Arts Ashbourne </h1>
 			<h2>Best Choice For Martial Arts</h2>
 			<p>We are a Martial Arts centre located in Ashbourne, Co Meath.</p>
 		  </div>

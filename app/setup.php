@@ -11,6 +11,8 @@ require_once __DIR__ . '/config_db.php';
 // ------------
 
 $myTemplatesPath = __DIR__ . '/../templates';
+//$loader = new Twig_Loader_Filesystem($templatesPath);
+//$twig = new Twig_Environment($loader);
 
 // setup Silex
 // ------------
@@ -22,6 +24,7 @@ $app->register(new Silex\Provider\TwigServiceProvider(), array(
 
     'twig.path' => $myTemplatesPath
 ));
+
 
 //----- autoload any classes we are using -----------
 
@@ -45,4 +48,10 @@ $app->register(new Provider\ServiceControllerServiceProvider());
     //'profiler.mount_prefix' => '/_profiler', // this is the default
 //
 //));
+//use Monolog\Logger;
+//use Monolog\Handler\StreamHandler;
+
+//$log = new Logger('roy');
+//$log->pushHandler(new StreamHandler('/Users/matt/Desktop/evote-dvd/zz_in_development_should_be_in_a_branch/eVote_dvd_version14_database/logs/log.txt', Logger::DEBUG));
+//$log->pushHandler(new StreamHandler('/logs/logs.txt', Logger::DEBUG));
 
