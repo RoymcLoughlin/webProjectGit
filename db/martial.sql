@@ -17,10 +17,11 @@ CREATE TABLE IF NOT EXISTS `martialAtsClass` (
   `id` int(11) NOT NULL, -- 1
   `className` text NOT NULL, -- 2
   `category` text NOT NULL, -- 3
-  `attendance` float NOT NULL, --  4
-  `totalClasses` float NOT NULL, -- 5
-  `timeOfEntry` CURRENT_DATE NOT NULL, -- 6
-  `currentClassProgress` int(11) NOT NULL, -- 7
+  `studentName` text NOT NULL, -- 4
+  `attendance` float NOT NULL, --  5
+  `totalClasses` float NOT NULL, -- 6
+  `timeOfEntry` CURRENT_DATE NOT NULL, -- 7
+  `currentClassProgress` int(11) NOT NULL, -- 8
 
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 
@@ -48,13 +49,13 @@ INSERT INTO `martialArtsStudent` (`id`, `namePerson`, `category`, `attendance`, 
 (4, 'Alex', 'Karate', 4.99, 0, 0),
 (5, 'Thomas', 'Taekwondo', 19.99, 95, 201);
 
-INSERT INTO `martialArtsClass`(`id`, `className`, `category`, `attendance`,`totalClasses`, `timeOfEntry`, `timeOfEntry`,`currentClassProgress`) VALUES
+INSERT INTO `martialArtsClass`(`id`, `className`, `category`,`studentName`, `attendance`,`totalClasses`, `timeOfEntry`, `timeOfEntry`,`currentClassProgress`) VALUES
 
-(1, 'Taekwondo', 'blueBelt', 4.0, 7.0, TIMESTAMP, 'C'),
-(2, 'Karate', 'whiteBelt', 3.0, 7.0, TIMESTAMP, 'D'),
-(3, 'Kung Fu', 'brownBlackBelt', 7.0, 7.0, TIMESTAMP, 'A'),
-(4, 'Karate', 'whiteBelt',6.0, 7.0, TIMESTAMP, 'B'),
-(5, 'Taekwondo', 'blackBelt',7.0, 7.0, TIMESTAMP, 'A');
+(1, 'Taekwondo', 'blueBelt', 'John Roberts', 4.0, 7.0, TIMESTAMP, 'C'),
+(2, 'Karate', 'whiteBelt', 'Peter Scott',3.0, 7.0, TIMESTAMP, 'D'),
+(3, 'Kung Fu', 'brownBlackBelt','Sam White', 7.0, 7.0, TIMESTAMP, 'A'),
+(4, 'Karate', 'whiteBelt','Josh Johnson',6.0, 7.0, TIMESTAMP, 'B'),
+(5, 'Taekwondo', 'blackBelt','Lee Roy',7.0, 7.0, TIMESTAMP, 'A');
 
 INSERT INTO `syllabusOfTechniques` (`id`, `techniqueCategory`
 , `techniqueGrade`, `techniqueOne`,

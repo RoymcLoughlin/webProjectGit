@@ -34,6 +34,35 @@ class MartialRepository
 
         return $martial;
     }
+    public function getLoggedIn()
+    {
+        $db = new DatabaseManager();
+        $connection = $db->getDbh();
+
+        $statement = $connection->prepare('SELECT * from LogIn');
+        $statement->setFetchMode(\PDO::FETCH_CLASS, '\\Itb\\Martial');
+        $statement->execute();
+
+        /*
+        $dvds = [];
+        while ($dvd = $statement->fetch()) {
+
+            $outputAsString = true;
+            $message = print_r($dvd, $outputAsString);
+            $log->addDebug($message);
+
+            print '<pre>';
+            print_r($dvd);
+
+            // append Dvd object to end of our array
+            $dvds[] = $dvd;
+        }
+        */
+
+        $martial = $statement->fetchAll();
+
+        return $martial;
+    }
 
     public function getOneById($id)
     {

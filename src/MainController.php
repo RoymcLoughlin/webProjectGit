@@ -28,6 +28,20 @@ class MainController
 //        print $htmlOutput;
         return $app['twig']->render($templateName . '.html.twig', $argsArray);
     }
+   public function adminAction(Request $request, Application $app){
+
+      $martialRepository = new MartialRepository();
+       $martial = $martialRepository->getAll();
+
+        $argsArray = [
+
+            'martial' => $martial,
+        ];
+
+        $templateName = 'admin';
+
+        return $app['twig']->render($templateName . '.html.twig', $argsArray);
+    }
 
     public function contactAction(Request $request, Application $app){
 
@@ -55,9 +69,47 @@ class MainController
 
     public function loginAction(Request $request, Application $app){
 
+        $martialRepository = new MartialRepository();
+        $martial = $martialRepository->getAll();
+
+        $argsArray = [
+            'martial' => $martial,
+        ];
+
         $templateName = 'login';
-        return $app['twig']->render($templateName . '.html.twig', []);
+        return $app['twig']->render($templateName . '.html.twig', $argsArray);
+
     }
+
+    //log in controller
+    public function SignInAction(Request $request, Application $app)
+    {
+
+        $em=$this->getDoctrine()->getManager();
+        $repository =$em->getRepository('LoginUser:User');
+
+        if($request->getMethod()=='POST')
+        {
+            $email=$request->get('email');
+            $password=$request->get('password');
+
+            $user=$repository->findOneBy(array('email'=>$email,'password'=>$password));
+
+            if ($email == 'fred'){
+                return $app['twig']->render('index' . '.html.twig', []);
+            } //if user has values
+
+//                return $this->render('DWMUserBundle:Default:home.html.twig', array('user' => $user));
+
+            else//if login is incorrect
+                return $this->render('DWMUserBundle:Default:signin.html.twig');
+        }
+
+
+        return $this->render('DWMUserBundle:Default:signin.html.twig');
+
+    }
+
 
     public function contactThisAction(Request $request, Application $app){
 

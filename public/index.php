@@ -53,6 +53,7 @@ $app->get('/classes', \Itb\Utility::controller('Itb', 'main/classes'));
 $app->get('/trainers', \Itb\Utility::controller('Itb', 'main/trainers'));
 $app->get('/login', \Itb\Utility::controller('Itb', 'main/login'));
 $app->get('/contact', \Itb\Utility::controller('Itb', 'main/contact'));
+$app->get('/admin', \Itb\Utility::controller('Itb', 'main/admin'));
 $app->get('/detail/{id}', \Itb\Utility::controller('Itb', 'main/detail'));
 
 $app->post('/processIndexMessageForm', \Itb\Utility::controller('Itb', 'message/submit'));
